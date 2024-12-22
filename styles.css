@@ -1,0 +1,183 @@
+@font-face {
+    font-family: 'mode7';
+    src: url('/fonts/Modeseven.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #111111fd;
+    overflow-x: hidden;
+    background-size: 40px 40px;
+    background-image: radial-gradient(circle, #000000 1px, rgba(0, 0, 0, 0) 1px);
+    font-family: 'mode7';
+}
+
+.console {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background-color: #0C0C0C;
+    border: .2rem solid #343434;
+    border-radius: 0.5rem;
+    width: 700px;
+    max-width: 90%;
+    margin: 0 auto;
+    top: 12rem;
+}
+
+.standardPhrase {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #0C0C0C;
+    padding: 1rem 0rem;
+    width: 100%;
+    max-height: 230px;
+    min-height: 230px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    font-size: 1.5rem;
+    color: white;
+    pointer-events: none;
+    align-content: flex-start;
+}
+
+.standardPhrase span {
+    display: inline-block;
+    margin-right: 0.2rem;
+}
+
+.standardPhrase::-webkit-scrollbar {
+    display: none;
+}
+
+.upper-console-container{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    background-color: #0C0C0C;
+    border: solid #343434;
+    border-width: 0rem .2rem .2rem .2rem;
+    border-bottom: 0;
+    padding: 0rem 3rem 0rem .7rem;
+    width: 700px;
+    max-width: 90%;
+    top: 10rem;
+    height: 3rem;
+}
+
+.upper-console-container::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    top: -2.5rem;
+    right: -.18rem;
+    height: 4rem;
+    background: #343434;
+    border: .2rem solid #343434;
+    border-radius: 0.5rem 0.5rem 0 0;
+    z-index: -2;
+}
+
+.upper-console-container #red-dot {
+    content: '';
+    position: absolute;
+    top: -2.7rem;
+    left: .8rem;
+    height: 1rem;
+    width: 1rem;
+    background: #FF5F57;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.upper-console-container #yellow-dot {
+    content: '';
+    position: absolute;
+    top: -2.7rem;
+    left: 2.2rem;
+    height: 1rem;
+    width: 1rem;
+    background: #FFBD2E;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.upper-console-container #green-dot {
+    content: '';
+    position: absolute;
+    top: -2.7rem;
+    left: 3.6rem;
+    height: 1rem;
+    width: 1rem;
+    background: #28C940;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timer {
+    position: absolute;
+    top: .5rem;
+    right: .3rem;
+    font-size: 1rem;
+    color: white;
+    font-weight: bold;
+    user-select: none;
+    z-index: 1;
+}
+
+textarea {
+    background-color: #0C0C0C;
+    border-bottom: #0C0C0C;
+    border-left: #0C0C0C;
+    border-right: #0C0C0C;
+    border-color: #0C0C0C;
+    width: 100%;
+    outline: none;
+    height: 2.5rem;
+    resize: none;
+    padding-left: .4rem;
+    padding-top: .5rem;
+    font-size: 1.1rem;
+    font-family: 'mode7';
+    color: white;
+    caret-color: white;
+    overflow: hidden;
+    caret-shape: block;
+}
+
+#console-user {
+    background: transparent;
+    outline: none;
+    padding-left: .4rem;
+    height: 1.3rem;
+    font-size: 1.1rem;
+    font-family: 'mode7';
+    color: white;
+}
+
+.command-screens {
+    border-radius: 8px;
+    line-height: 0.8;
+    font-size: 1rem;
+}
+
+.command-screens p {
+    margin: 10px 0;
+}
+
+#exit-help-screen{
+    padding-top: 1rem;
+}
