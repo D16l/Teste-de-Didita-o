@@ -208,7 +208,7 @@ inputElement.addEventListener('keydown', async (ev) => {
                 const devScreenHTML = `
                         <div class="command-screens">
                             <h4>Você pode fazer download do código por aqui:</h4>
-                            <p style="pointer-events: all;" target="_blank" rel="noopener noreferrer"><a href="https://github.com/D16l">Github</a></p>
+                            <p style="pointer-events: all;" target="_blank" rel="noopener noreferrer"><a href="https://github.com/D16l/Teste-de-Diditacao">Github</a></p>
                             <p id="exit-help-screen">Para sair digite 'exit'</p>
                         </div>
                     `;
