@@ -393,6 +393,7 @@ async function handleTestConclusion() {
                                     <p>Erros ortográficos: ${spellingErrorsCount}</p>
                                     <p>Palavras erradas: ${validWrongWordsCount}</p><br>
                                     <p>${highlightedText}</p>
+				    <p>Aperte Esc para reiniciar</p>
                                 </div>`;
     phraseContainer.style.paddingTop = 0
     phraseContainer.innerHTML = conclusionScreenHTML;    
