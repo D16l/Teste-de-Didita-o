@@ -183,8 +183,8 @@ inputElement.addEventListener('keydown', async (ev) => {
                         <div class="command-screens">
                             <h4>Lista de comandos para personalisar seu teste</h4>
                             <p>/start - Inicia o teste</p>
-                            <p>/time + Espaço - Define o tempo</p>
-                            <p>/words + Espaço - Define a frase;palavras que estarão no teste</p>
+                            <p>/time + Espaço + Valor - Define o tempo</p>
+                            <p>/words + Espaço + Texto - Define a frase;palavras que estarão no teste</p>
                             <p>/random - Faz as frases serem aleatórias</p>
                             <p>/dev - ???</p>
                             <p>Esc - Para dar restart no teste (Após o término)</p>
@@ -217,8 +217,8 @@ inputElement.addEventListener('keydown', async (ev) => {
                 break;
 
             case inputCommand.startsWith('/random'):
-                isRandomTime = true;
-                isRandomPhrase = true;
+                isRandomTime = !isRandomTime;
+                isRandomPhrase = !isRandomPhrase;
                 inputElement.value = '';
                 break;
             default:
