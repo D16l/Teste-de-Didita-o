@@ -163,7 +163,6 @@ inputElement.addEventListener('keydown', async (ev) => {
                 await loadingScreen();
                 renderPhraseWithHighlights();
                 if(isRandomPhrase){
-                    isRandomTime = true;
                     renderNewQuote();
                     renderPhraseWithHighlights();
                 }
@@ -217,8 +216,8 @@ inputElement.addEventListener('keydown', async (ev) => {
                 break;
 
             case inputCommand.startsWith('/random'):
-                isRandomTime = !isRandomTime;
-                isRandomPhrase = !isRandomPhrase;
+                isRandomTime = true;
+                isRandomPhrase = true;
                 inputElement.value = '';
                 break;
             default:
